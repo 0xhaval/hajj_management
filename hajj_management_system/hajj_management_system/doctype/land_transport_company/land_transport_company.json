@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:HAJ-AGC-{YYYY}-{#####}",
+ "creation": "2023-01-16 14:07:30.107366",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "agency_name",
+  "column_break_2",
+  "type",
+  "item_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "agency_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_reference",
+   "fieldtype": "Link",
+   "label": "Item Reference",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\u0646\u0642\u0644 \u062f\u0627\u062e\u0644\u064a\n\u0646\u0642\u0644 \u062e\u0627\u0631\u062c\u064a"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-06 19:39:52.226344",
+ "modified_by": "Administrator",
+ "module": "Hajj Management System",
+ "name": "Land Transport Company",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "agency_name",
+ "show_name_in_global_search": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "agency_name"
+}

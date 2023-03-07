@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:HAJ-RFA-{YYYY}-{#####}",
+ "creation": "2023-01-24 22:25:43.453494",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "from_one",
+  "column_break_1",
+  "to",
+  "section_break_4",
+  "from_two",
+  "column_break_0",
+  "to_two",
+  "section_break_8",
+  "from_to_from",
+  "column_break_2",
+  "airline",
+  "column_break_4",
+  "airline_name",
+  "section_break_12",
+  "item_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "airline",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Airline",
+   "options": "Airline"
+  },
+  {
+   "fieldname": "from_to_from",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "From To From",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_reference",
+   "fieldtype": "Link",
+   "label": "Item Reference",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "airline.name1",
+   "fieldname": "airline_name",
+   "fieldtype": "Data",
+   "label": "Airline Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Link",
+   "label": "To",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_one",
+   "fieldtype": "Link",
+   "label": "From",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "from_two",
+   "fieldtype": "Link",
+   "label": "From",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "to_two",
+   "fieldtype": "Link",
+   "label": "To",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-05 00:52:54.713701",
+ "modified_by": "Administrator",
+ "module": "Hajj Management System",
+ "name": "Route of flight Airline",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "airline_name",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "from_to_from"
+}

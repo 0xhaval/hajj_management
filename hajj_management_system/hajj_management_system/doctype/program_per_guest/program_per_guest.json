@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-01-31 06:43:55.519339",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "level",
+  "column_break_1",
+  "guest",
+  "column_break_2",
+  "gender",
+  "column_break_4",
+  "mahrm",
+  "housing_section",
+  "room_type",
+  "room_type_name",
+  "date_8",
+  "test",
+  "room_number",
+  "flight_section",
+  "flight",
+  "column_break_19",
+  "visa"
+ ],
+ "fields": [
+  {
+   "fieldname": "guest",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Guest",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "guest.gender",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.gender == \"\u0623\u0646\u062b\u0649\"",
+   "fieldname": "mahrm",
+   "fieldtype": "Link",
+   "label": "Mahrm",
+   "mandatory_depends_on": "eval:doc.gender == \"\u0623\u0646\u062b\u0649\"",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "housing_section",
+   "fieldtype": "Section Break",
+   "label": "Housing"
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room Type",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "flight_section",
+   "fieldtype": "Section Break",
+   "label": "Flight"
+  },
+  {
+   "fieldname": "flight",
+   "fieldtype": "Link",
+   "label": "Ticket",
+   "options": "Item",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "visa",
+   "fieldtype": "Link",
+   "label": "Visa",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "room_type.item_name",
+   "fieldname": "room_type_name",
+   "fieldtype": "Data",
+   "label": "Room Type Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "label": "Level",
+   "options": "\nFirst\nSecond\nThird\nFourth"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "test",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Serial No",
+   "options": "Serial No"
+  },
+  {
+   "fetch_from": "test.room_number",
+   "fieldname": "room_number",
+   "fieldtype": "Data",
+   "label": "Room Number",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-02-25 01:42:43.868209",
+ "modified_by": "Administrator",
+ "module": "Hajj Management System",
+ "name": "Program Per Guest",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

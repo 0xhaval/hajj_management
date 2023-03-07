@@ -1,0 +1,281 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:HAJ-PRO-{YYYY}-{#####}",
+ "creation": "2023-01-24 21:26:09.585392",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "section_break_2",
+  "program_name",
+  "column_break_10",
+  "program_type",
+  "column_break_1",
+  "transport_type",
+  "column_break_120",
+  "hotel",
+  "section_break_8",
+  "date",
+  "column_break_111",
+  "return_date",
+  "column_break_1113",
+  "departure_date_hijri",
+  "column_break_6",
+  "return_date_hijri",
+  "land_transport_section",
+  "land_transport",
+  "airline_section",
+  "airline",
+  "column_break_2",
+  "route_of_flight",
+  "program_item_section",
+  "program_items",
+  "accounting_section",
+  "cost_amount",
+  "column_break_14",
+  "amount",
+  "program_limit_section",
+  "max_limit_guests",
+  "column_break_12",
+  "booking_per_guest",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "program_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Program type",
+   "options": "Hajj\nUmrah",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Departure Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program_item_section",
+   "fieldtype": "Section Break",
+   "label": "Program Item"
+  },
+  {
+   "fieldname": "program_items",
+   "fieldtype": "Table",
+   "label": "Program Items",
+   "options": "Program Items",
+   "reqd": 1
+  },
+  {
+   "fieldname": "accounting_section",
+   "fieldtype": "Section Break",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Selling Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Program",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "program_limit_section",
+   "fieldtype": "Section Break",
+   "label": "Program limit"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "max_limit_guests",
+   "fieldtype": "Int",
+   "label": "Max limit (Guests)"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "booking_per_guest",
+   "fieldtype": "Int",
+   "label": "Current Guests",
+   "read_only": 1
+  },
+  {
+   "fieldname": "program_name",
+   "fieldtype": "Data",
+   "label": "Program Name",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.transport_type == \"Airline\"",
+   "fieldname": "airline",
+   "fieldtype": "Link",
+   "label": "Airline",
+   "mandatory_depends_on": "eval:doc.transport_type == \"Airline\"",
+   "options": "Airline"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.transport_type == \"Airline\"",
+   "fieldname": "route_of_flight",
+   "fieldtype": "Link",
+   "label": "Route of flight",
+   "mandatory_depends_on": "eval:doc.transport_type == \"Airline\"",
+   "options": "Route of flight Airline",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cost_amount",
+   "fieldtype": "Currency",
+   "label": "Cost Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.transport_type == \"Airline\"",
+   "fieldname": "airline_section",
+   "fieldtype": "Section Break",
+   "label": "Airline"
+  },
+  {
+   "fieldname": "transport_type",
+   "fieldtype": "Select",
+   "label": "Transport Type",
+   "options": "\nLand\nAirline",
+   "reqd": 1
+  },
+  {
+   "fieldname": "land_transport_section",
+   "fieldtype": "Section Break",
+   "label": "Land Transport"
+  },
+  {
+   "depends_on": "eval:doc.transport_type == \"Land\"",
+   "fieldname": "land_transport",
+   "fieldtype": "Link",
+   "label": "Land Transport",
+   "mandatory_depends_on": "eval:doc.transport_type == \"Land\"",
+   "options": "Land Transport Company"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "label": "Hotel",
+   "options": "Hotel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "example: 04 / 08 / 1444",
+   "fieldname": "departure_date_hijri",
+   "fieldtype": "Data",
+   "label": "Departure Date Hijri"
+  },
+  {
+   "fieldname": "column_break_120",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "example: 04 / 10 / 1444",
+   "fieldname": "return_date_hijri",
+   "fieldtype": "Data",
+   "label": "Return Date Hijri"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_111",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "return_date",
+   "fieldtype": "Date",
+   "label": "Return Date"
+  },
+  {
+   "fieldname": "column_break_1113",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Booking",
+   "link_doctype": "Booking",
+   "link_fieldname": "program"
+  }
+ ],
+ "modified": "2023-03-07 00:17:52.377805",
+ "modified_by": "Administrator",
+ "module": "Hajj Management System",
+ "name": "Program",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "program_name,program_type,date",
+ "show_name_in_global_search": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "program_name",
+ "translated_doctype": 1
+}

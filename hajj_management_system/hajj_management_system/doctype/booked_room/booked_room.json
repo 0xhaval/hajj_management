@@ -1,0 +1,40 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-12-07 09:32:21.122381",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "room",
+  "qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room",
+   "options": "Item"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Qty"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-02-15 22:20:25.127787",
+ "modified_by": "Administrator",
+ "module": "Hajj Management System",
+ "name": "Booked Room",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

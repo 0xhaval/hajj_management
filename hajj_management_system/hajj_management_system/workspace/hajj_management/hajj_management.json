@@ -1,0 +1,157 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h2\\\">System Overview</span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Main\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Basics\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Company\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Guest\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Room\",\"col\":4}}]",
+ "creation": "2023-01-07 14:15:22.846879",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "share-people",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Hajj Management",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Guest",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Guest",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Company",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel",
+   "link_count": 0,
+   "link_to": "Hotel",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Main",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Program",
+   "link_count": 0,
+   "link_to": "Program",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Booking",
+   "link_count": 0,
+   "link_to": "Booking",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Basics",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Airline",
+   "link_count": 0,
+   "link_to": "Airline",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Land Transport Company",
+   "link_count": 0,
+   "link_to": "Land Transport Company",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Route of flight Airline",
+   "link_count": 0,
+   "link_to": "Route of flight Airline",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Room",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Room Type",
+   "link_count": 0,
+   "link_to": "Room Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Room",
+   "link_count": 0,
+   "link_to": "Serial No",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-02-17 14:56:45.452677",
+ "modified_by": "Administrator",
+ "module": "Hajj Management System",
+ "name": "Hajj Management",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [],
+ "title": "Hajj Management"
+}

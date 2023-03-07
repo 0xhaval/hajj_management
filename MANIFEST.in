@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include hajj_management_system *.css
+recursive-include hajj_management_system *.csv
+recursive-include hajj_management_system *.html
+recursive-include hajj_management_system *.ico
+recursive-include hajj_management_system *.js
+recursive-include hajj_management_system *.json
+recursive-include hajj_management_system *.md
+recursive-include hajj_management_system *.png
+recursive-include hajj_management_system *.py
+recursive-include hajj_management_system *.svg
+recursive-include hajj_management_system *.txt
+recursive-exclude hajj_management_system *.pyc

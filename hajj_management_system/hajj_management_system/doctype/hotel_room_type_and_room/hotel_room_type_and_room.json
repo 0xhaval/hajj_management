@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-02-05 00:20:05.073344",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "floor_number",
+  "room_type",
+  "number_of_rooms"
+ ],
+ "fields": [
+  {
+   "fieldname": "floor_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Floor Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room Type",
+   "options": "Room Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_rooms",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number of Rooms",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-02-05 00:20:05.073344",
+ "modified_by": "Administrator",
+ "module": "Hajj Management System",
+ "name": "Hotel Room Type and Room",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

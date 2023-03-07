@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:HAJ-RT-{YYYY}-{#####}",
+ "creation": "2022-12-05 11:44:59.130808",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type_name",
+  "column_break_2",
+  "hotel",
+  "hotel_name",
+  "details_section",
+  "description",
+  "column_break_6",
+  "member_capacity",
+  "smoke_friendly",
+  "reference_section",
+  "item"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "member_capacity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Member Capacity",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "smoke_friendly",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Smoke Friendly"
+  },
+  {
+   "fieldname": "type_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "label": "Hotel",
+   "options": "Hotel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "hotel.hotel_name",
+   "fieldname": "hotel_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Hotel Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-02-05 22:44:34.441061",
+ "modified_by": "Administrator",
+ "module": "Hajj Management System",
+ "name": "Room Type",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "type_name",
+ "show_name_in_global_search": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "type_name"
+}

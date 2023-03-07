@@ -1,0 +1,401 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:HAJ-BOK-{YYYY}-{######}",
+ "creation": "2022-12-06 23:20:34.680315",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "comapny",
+  "column_break_222",
+  "status",
+  "column_break_2",
+  "date",
+  "column_break_4",
+  "is_umrah",
+  "program_section",
+  "program",
+  "column_break_9",
+  "airline",
+  "column_break_8",
+  "route_of_flight",
+  "column_break_10",
+  "hotel",
+  "section_break_12",
+  "program_item_booking",
+  "family_section",
+  "supervisor",
+  "column_break_16",
+  "hotel_name",
+  "section_break_18",
+  "program_per_guest",
+  "section_break_22",
+  "additional_item_per_guest",
+  "section_break_10",
+  "check_in",
+  "column_break_18",
+  "check_out",
+  "column_break_7",
+  "number_of_days",
+  "column_break_22",
+  "exact_check_out",
+  "section_break_32",
+  "departure_date_hijri",
+  "column_break_34",
+  "return_date_hijri",
+  "section_break_24",
+  "invoice_ref",
+  "column_break_32",
+  "total_amount",
+  "booking_information_tab",
+  "booking_number",
+  "column_break_44",
+  "reference_number",
+  "section_break_46",
+  "booking_level",
+  "section_break_48",
+  "aeparture_time",
+  "column_break_50",
+  "arrival_time",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u063a\u064a\u0631 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\"",
+   "fieldname": "check_in",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "mandatory_depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u063a\u064a\u0631 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\""
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u063a\u064a\u0631 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\"",
+   "fieldname": "check_out",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date",
+   "mandatory_depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u063a\u064a\u0631 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\""
+  },
+  {
+   "fieldname": "number_of_days",
+   "fieldtype": "Int",
+   "label": "Number of Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "family_section",
+   "fieldtype": "Section Break",
+   "label": "Guests Group"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Pending\nBooked\nComplete",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "invoice_ref",
+   "fieldtype": "Link",
+   "label": "Invoice Ref",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Booking",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "exact_check_out",
+   "fieldtype": "Date",
+   "label": "Exact Check Out",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "program.hotel",
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "label": "Hotel",
+   "mandatory_depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u063a\u064a\u0631 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\"",
+   "options": "Hotel",
+   "read_only_depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\""
+  },
+  {
+   "fieldname": "program_section",
+   "fieldtype": "Section Break",
+   "label": "Program"
+  },
+  {
+   "depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\"",
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "mandatory_depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\"",
+   "options": "Program"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "program.airline",
+   "fieldname": "airline",
+   "fieldtype": "Link",
+   "label": "Airline",
+   "mandatory_depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u063a\u064a\u0631 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\"",
+   "options": "Airline",
+   "read_only": 1,
+   "read_only_depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\""
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "program.route_of_flight",
+   "fieldname": "route_of_flight",
+   "fieldtype": "Link",
+   "label": "Route of flight",
+   "mandatory_depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u063a\u064a\u0631 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\"",
+   "options": "Route of flight Airline",
+   "read_only": 1,
+   "read_only_depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\""
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "program_item_booking",
+   "fieldtype": "Table",
+   "label": "Program Item Booking",
+   "options": "Program Item Booking",
+   "read_only": 1
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program_per_guest",
+   "fieldtype": "Table",
+   "label": "Program Per Guest",
+   "options": "Program Per Guest"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "hotel.hotel_name",
+   "fieldname": "hotel_name",
+   "fieldtype": "Data",
+   "label": "Hotel Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_umrah",
+   "fieldtype": "Select",
+   "label": "Booking Type",
+   "options": "\u062d\u062c\u0632 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\n\u062d\u062c\u0632 \u063a\u064a\u0631 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "additional_item_per_guest",
+   "fieldtype": "Table",
+   "label": "Additional Item Per Guest",
+   "options": "Additional Item Per Guest"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "example: 04 / 08 / 1444",
+   "fetch_from": "program.departure_date_hijri",
+   "fieldname": "departure_date_hijri",
+   "fieldtype": "Data",
+   "label": "Departure Date Hijri",
+   "mandatory_depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u063a\u064a\u0631 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\"",
+   "read_only_depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\""
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "example: 04 / 10 / 1444",
+   "fetch_from": "program.return_date_hijri",
+   "fieldname": "return_date_hijri",
+   "fieldtype": "Data",
+   "label": "Return Date Hijri",
+   "mandatory_depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u063a\u064a\u0631 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\"",
+   "read_only_depends_on": "eval:doc.is_umrah == \"\u062d\u062c\u0632 \u0645\u0628\u0646\u064a \u0639\u0644\u0649 \u0628\u0631\u0646\u0627\u0645\u062c\""
+  },
+  {
+   "fieldname": "comapny",
+   "fieldtype": "Link",
+   "label": "Comapny",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_222",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "booking_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Booking Information"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "booking_number",
+   "fieldtype": "Data",
+   "label": "Booking Number"
+  },
+  {
+   "fieldname": "column_break_44",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "reference_number",
+   "fieldtype": "Data",
+   "label": "Reference Number"
+  },
+  {
+   "fieldname": "section_break_46",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "booking_level",
+   "fieldtype": "Data",
+   "label": "Booking Level"
+  },
+  {
+   "fieldname": "section_break_48",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "aeparture_time",
+   "fieldtype": "Time",
+   "label": "Aeparture time"
+  },
+  {
+   "fieldname": "column_break_50",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "arrival_time",
+   "fieldtype": "Time",
+   "label": "Arrival time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-03-06 19:57:11.844933",
+ "modified_by": "Administrator",
+ "module": "Hajj Management System",
+ "name": "Booking",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

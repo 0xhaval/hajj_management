@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-01-31 06:18:59.179039",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "is_mandatory",
+  "item_type",
+  "item",
+  "selling_price"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "is_mandatory",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Mandatory",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "selling_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Selling Price",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-02-17 15:13:13.648476",
+ "modified_by": "Administrator",
+ "module": "Hajj Management System",
+ "name": "Program Item Booking",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
